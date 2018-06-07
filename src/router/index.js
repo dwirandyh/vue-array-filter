@@ -5,15 +5,15 @@ import FilterComponent from '@/components/FilterComponent'
 Vue.use(Router)
 
 Vue.filter('toUSD', function (value) {
-  return '$' + value
+    return '$' + value
 })
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: FilterComponent
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'HelloWorld',
+            component: FilterComponent
+        }
+    ]
 })
