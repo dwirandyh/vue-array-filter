@@ -53,6 +53,14 @@
                 <td>Camel Case</td>
                 <td>{{ 'Camel Case' | camelCase }}</td>
             </tr>
+            <tr>
+                <td>Underscore Case</td>
+                <td>{{ 'Underscore Case' | underscoreCase }}</td>
+            </tr>
+            <tr>
+                <td>Pascal Case</td>
+                <td>{{ 'pascal case' | pascalCase }}</td>
+            </tr>
         </table>
     </div>
 </template>
@@ -69,9 +77,6 @@
             }
         },
         filters: {
-            /**
-             * @return {string}
-             */
             upperCase (str) {
                 return str.toUpperCase()
             },
@@ -83,6 +88,26 @@
                     // If it is the first word make sure to lowercase all the chars.
                     if (index === 0) {
                         return word.toLowerCase()
+                    }
+                    // If it is not the first word only upper case the first char and lowercase the rest.
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                }).join('')
+            },
+            underscoreCase (str) {
+                return str.split(' ').map(function (word, index) {
+                    // If it is the first word make sure to lowercase all the chars.
+                    if (index === 0) {
+                        return word.toLowerCase()
+                    }
+                    // If it is not the first word only upper case the first char and lowercase the rest.
+                    return '_' + word.charAt(0).toLowerCase() + word.slice(1).toLowerCase()
+                }).join('')
+            },
+            pascalCase (str) {
+                return str.split(' ').map(function (word, index) {
+                    // If it is the first word make sure to lowercase all the chars.
+                    if (index === 0) {
+                        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
                     }
                     // If it is not the first word only upper case the first char and lowercase the rest.
                     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
