@@ -2,7 +2,7 @@
 
 > Vue String and Array Filter Project<br>
 
-##String Filter
+## String Filter
 <ul>
 <li>Upper Case</li>
 <li>Lower Case</li>
