@@ -1,6 +1,22 @@
-# vueapp
+# Vue String And Array Filter
 
-> A Vue.js project
+> Vue String and Array Filter Project<br>
+
+##String Filter
+<ul>
+<li>Upper Case</li>
+<li>Lower Case</li>
+<li>Camel Case</li>
+<li>Underscore Case</li>
+<li>Pascal Case</li>
+<li>Append</li>
+<li>Prepend</li>
+<li>Repeat</li>
+<li>Remove</li>
+<li>Split</li>
+<li>Trim</li>
+</ul>
+
 
 ## Build Setup
 
@@ -26,5 +42,3 @@ npm run e2e
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
