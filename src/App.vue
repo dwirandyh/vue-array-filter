@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <router-view/>
+        <array-component></array-component>
+        <filter-component></filter-component>
     </div>
 </template>
 
